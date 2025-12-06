@@ -1,295 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Digital Marketing Agency</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  
-</head>
-<body>
-      <header>
-        <div class="container">
-          <a href="index.html" class="logo">
-            <img src="./image.png" alt="Stackly Logo">
-            
-          </a>
-          
-          <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-          
-          <nav id="navbar">
-            <a href="index1.html">Home page2</a>
-            <a href="index.html">home page 1</a>
-            <a href="about1.html">About</a>
-            <a href="services1.html">Services</a>
-            <a href="blog1.html">Blog</a>
-            <a href="contact1.html">Contact</a>
-            <a href="login.html"><button class="login-button">Login</button></a>
-            <button class="menu-toggle" aria-label="Toggle navigation">
-              &#9776;
-            </button>
-          </nav>
-        </div>
-      </header>
-
-  <!-- AOS Animation Library -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
-
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-
-    /* Header Section */
-header {
-  background-color: #bed9f3;
-  color: white;
-  padding: 1.5rem 0;
-  position: sticky;
-  top: 0;
-  width: 100%;
-  z-index: 999;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header h1 {
-  font-size: 1.8rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background-color: #f9f9f9; */
-      color: #333;
-    }
-
-    /* Header Section */
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-
-    /* Header Section */
-header {
-  background-color: #bed9f3;
-  color: white;
-  padding: 1.5rem 0;
-  position: sticky;
-  top: 0;
-  width: 100%;
-  z-index: 999;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header h1 {
-  font-size: 1.8rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
-header {
-  background-color: #bed9f3;
-  color: white; */
-  padding: 1.5rem 0;
-  position: sticky;
-  top: 0;
-  width: 100%;
-  z-index: 999;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header h1 {
-  font-size: 1.8rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      /* background-color: #f9f9f9; */
-      color: #333;
-    }
-
-    header {
-      /* background: url('https://source.unsplash.com/1600x600/?technology,digital') center/cover no-repeat; */
-      color: white;
-      /* padding: 100px 20px; */
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      background-color: rgba(0, 0, 0, 0.5);
-      display: inline-block;
-      padding: 10px 20px;
-    }
-
-    .container {
-      max-width: 1200px;
-      /* margin: 40px auto; */
-      padding: 0 20px;
-    }
-
-    .service-card {
-      background-color: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
-      margin-bottom: 40px;
-      overflow: hidden;
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    .service-card img, .service-card iframe {
-      width: 100%;
-      max-width: 500px;
-      height: auto;
-      object-fit: cover;
-      flex: 1 1 300px;
-    }
-
-    .service-content {
-      flex: 1 1 400px;
-      padding: 30px;
-    }
-
-    .service-content h2 {
-      color: #0d47a1;
-      margin-top: 0;
-    }
-
-    .service-content p {
-      line-height: 1.7;
-      margin-bottom: 15px;
-    }
-
-    footer {
-      background-color: #e3f2fd;
-      text-align: center;
-      padding: 30px 10px;
-      color: #444;
-    }
-
-    @media (max-width: 768px) {
-      .service-card {
-        flex-direction: column;
-      }
-    }
-
-    .login-button {
-        background-color: #e74c3c;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        cursor: pointer;
-        border-radius: 5px;
-        font-weight: bold;
-        transition: background-color 0.3s;
-      }
-      .login-button:hover {
-        background-color: #c0392b;
-      }
-      .menu-toggle {
-        display: none;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 28px;
-        cursor: pointer;
-      }
-
-
-      
-    body {
-      background-image: url('./image1.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Payment</title>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="./services1.css">
     
-
-
-
-      
-
-      /* Navbar Mobile Styles */
-      @media (max-width: 900px) {
-        .navbar {
-          flex-wrap: wrap;
-        }
-        .navbar .login-button {
-          order: 3;
-          width: 100%;
-          margin-top: 10px;
-        }
-        .navbar .menu-toggle {
-          display: block;
-        }
-        .navbar .nav-links {
-          width: 100%;
-          display: none;
-        }
-        .navbar .nav-links.active {
-          display: block;
-        }
-        .navbar .main-menu {
-          flex-direction: column;
-          width: 100%;
-          margin-top: 10px;
-        }
-        .navbar .menu-item > a {
-          text-align: left;
-        }
-        .dropdown-content {
-          position: static;
-          width: 100%;
-          border-left: 5px solid #3498db;
-          padding-left: 10px;
-        }
-        .dropdown-content li a {
-          padding-left: 35px;
-          background-color: #445970;
-        }
-        .navbar .menu-item.has-dropdown:hover .dropdown-content {
-          display: none;
-        }
-      }
-
-  </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+        <a href="home2.html">   
+            <img src="./white.webp" alt="Stackly Logo" style="height: 60px; ">
+          </a> 
+        <!-- div class="logo">Tech<span>Solutions</span></div> -->
 
-  <div class="container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <ul class="nav-links" >
+
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropdown-btn">Home <i class="fa-solid fa-caret-down"></i></a>
+                
+                    <ul class="dropdown-content">
+                        <li><a href="./index.html">Home 1</a></li>
+                        <li><a href="./home2.html">Home 2</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="./about1.html">About</a></li>
+                <li><a href="./services1.html">Services</a></li>
+                <li><a href="./contact1.html">Contact</a></li>
+                <li><a href="./dashboard1.html">Dashboard</a></li>
+                <li><a href="./login1.html">Login</a></li>
+
+            </ul>
+        </nav>
+
+        <!-- Toggle -->
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+    </header>
+    <style>
+        /* ================= GLOBAL ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f5f7fa;
+}
+
+a { text-decoration: none; }
+
+ul { list-style: none; }
+
+
+
+
+/* ================= HEADER ================= */
+.header {
+    width: 100%;
+    padding: 18px 40px;
+    background: #0b1f3a;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #00d4ff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+/* Dropdown Wrapper */
+.dropdown {
+    position: relative;
+}
+
+/* Dropdown Button */
+.dropdown-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Desktop Hover */
+@media (min-width: 901px) {
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 38px;
+    left: 0;
+    background: #12274d;
+    width: 160px;
+    border-radius: 8px;
+    padding: 10px 0;
+    z-index: 999;
+}
+
+.dropdown-content li a {
+    display: block;
+    padding: 10px 15px;
+    color: white;
+}
+
+.dropdown-content li a:hover {
+    background: #0e1c33;
+}
+
+/* Toggle */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+li a{
+    color:white;
+}
+
+
+
+/* ================= FOOTER ================= */
+.footer {
+    background: #0b1f3a;
+    padding-top: 40px;
+    color: white;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+
+/* Footer Boxes */
+.footer-box h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #00e1ff;
+}
+
+.footer-box p, 
+.footer-box a {
+    color: #e0e0e0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-box ul {
+    list-style: none;
+}
+
+.footer-box ul li {
+    margin-bottom: 8px;
+}
+
+.footer-box ul li a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-box ul li a:hover {
+    color: #00e1ff;
+}
+
+
+.footer-bottom {
+    text-align: center;
+    background: #08192e;
+    padding: 15px 0;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin-right: 12px;
+    font-size: 18px;
+    width: 38px;
+    height: 38px;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 50%;
+    background: #111;
+    color: #00e1ff;
+    border: 1px solid #00e1ff;
+    transition: 0.3s;
+}
+
+.footer-social a:hover {
+    background: #00e1ff;
+    color: #000;
+    transform: translateY(-5px);
+}
+
+/* Map */
+.footer-box iframe {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    border: none;
+}
+
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #0b1f3a;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        width: 200px;
+        padding: 20px;
+        border-radius: 10px;
+        z-index: 1000;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .footer-box {
+        width: 45%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer-box {
+        width: 100%;
+    }
+}
+
+
+
+
+
+    </style>
+<body><div class="container">
 
     <!-- SEO -->
     <div class="service-card" data-aos="fade-up">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGQTGp8aFk_s58rLO-MeYbawKsmsh1POGIuw&s" alt="SEO Services" />
+      <img src="./seo.webp" alt="SEO Services" />
       <div class="service-content">
         <h2>Search Engine Optimization (SEO)</h2>
         <p>
@@ -315,7 +294,7 @@ header h1 {
 
     <!-- Social Media -->
     <div class="service-card" data-aos="fade-up">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNLUySSL0MHG588qk5khjvhfLsXPWnAE3h5g&s" alt="Social Media Marketing" />
+      <img src="./social media.webp" alt="Social Media Marketing" />
       <div class="service-content">
         <h2>Social Media Marketing</h2>
         <p>
@@ -328,7 +307,7 @@ header h1 {
 
     <!-- Content Marketing -->
     <div class="service-card" data-aos="fade-up">
-      <img src="https://static.vecteezy.com/system/resources/previews/049/482/786/non_2x/coffee-laptop-and-notes-on-a-wooden-desk-photo.jpg" alt="Content Marketing" />
+      <img src="./content strategy.webp" alt="Content Marketing" />
       <div class="service-content">
         <h2>Content Marketing</h2>
         <p>
@@ -354,7 +333,7 @@ header h1 {
 
     <!-- Web Design -->
     <div class="service-card" data-aos="fade-up">
-      <img src="https://thumbs.dreamstime.com/b/conceptual-hand-writing-showing-our-services-concept-meaning-occupation-function-serving-intangible-products-male-wear-160644151.jpg" alt="Web Design and Development" />
+      <img src="./web design.webp" alt="Web Design and Development" />
       <div class="service-content">
         <h2>Website Design & Development</h2>
         <p>
@@ -367,68 +346,98 @@ header h1 {
 
   </div>
 
-  
-
-  <!-- AOS Script -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
-  </script>
-
-  <footer class="footer">
-    <div class="footer-container">
-  
-      <!-- Column 1: Logo and About -->
-      <div class="footer-section about">
-        <img src="./image.png" alt="Stackly Logo" class="footer-logo">
-        <h3>Stackly Digital Payment Services</h3>
-        <p>Empowering businesses and users with fast, secure, and seamless digital transactions.</p>
-      </div>
-
-      
-  
-      <!-- Column 2: Quick Links -->
-      <div class="footer-section links">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index1.html">Home</a></li>
-          <li><a href="about1.html">About Us</a></li>
-          <li><a href="services1.html">Services</a></li>
-          <li><a href="blog1.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-  
-      <!-- Column 3: Contact -->
-      <div class="footer-section contact">
-        <h4>Get in Touch</h4>
-        <p> MMR complex,salem,Tamil nadu 636008</p>
-        <p>Email: <a href="mailto:support@stackly.com">info@thestackly.com</a></p>
-        <p>Phone: +91 70107 92745</p>
-        <div class="social-icons">
-          <a href="404.html"><i class="fab fa-facebook-f"></i></a>
-          <a href="404.html"><i class="fab fa-twitter"></i></a>
-          <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
-          <a href="404.html"><i class="fab fa-instagram"></i></a>
-        </div>
+   <!-- <footer> -->
+    <footer class="footer">
+        <div class="footer-container">
     
-        <!-- <div class="social-icons">
-            <a href="https://www.facebook.com/people/Stackly-Stackly/pfbid0JtGU9e9Lr3qi7T7zwqd7znjcKBFgJkRNUT9dkSAfVgj5Fea9cnwPDAaKFdqcZVvBl/?rdid=6mn5QnllxYJS3OSw&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BrqaZkJRe%2F"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://x.com/The_Stackly"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/company/the-stackly/"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://www.instagram.com/thestackly/#"><i class="fab fa-instagram"></i></a>
-          </div> -->
-              <iframe
-                  src="https://www.google.com/maps?q=Salem%20Tamil%20Nadu&output=embed"
-                  width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+            <!-- Logo / About -->
+            <div class="footer-box">
+                <img src="./white.webp" alt="Stackly Logo" class="footer-logo"  style="height:60px;">
+   
+               
+                <!-- <p>We deliver secure, scalable and innovative IT services for global businesses.</p><br> -->
+    
+                <!-- Social Icons -->
+                <div class="footer-social">
+                    <a href="./404.html"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="./404.html"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="./404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="./404.html"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+            <!-- Quick Links -->
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="./home2.html">Home </a></li>
+                    <li><a href="./about1.html">About</a></li>
+                    <li><a href="./services1.html">Services</a></li>
+                    <li><a href="./blog1.html">Blog</a></li>
+                    <li><a href="./contact1.html">Contact</a></li>
+                </ul>
+            </div>
+    
+            <!-- Address -->
+            <div class="footer-box">
+                <h3>Our Address</h3>
+                <p>
+                    MMR complex.<br>
+                    chinna tirupathi kovil street,<br>
+                    salem,Tamil nadu-636008<br>
+                    <!-- Bengaluru, Karnataka – 560066<br> -->
+                    India<br><br>
+    
+                    <strong>Phone:</strong> +91 98765 43210<br>
+                    <strong>Email:</strong> support@thestackly.com
+                </p>
+            </div>
+    
+            <!-- Google Map -->
+            <div class="footer-box">
+                <h3>Location</h3>
+                <iframe 
+                src="https://www.google.com/maps?q=Salem%20Tamil%20Nadu&output=embed"
+                    allowfullscreen="" 
+                    loading="lazy">
                 </iframe>
             </div>
-          
-          </footer>
-  
-  <script src="scripts.js"></script>
+    
+        </div>
+    
+        <div class="footer-bottom">
+            <p>© 2025 stackly | All Rights Reserved</p>
+        </div>
+    </footer>
+    <script>
+        // TOGGLE MENU
+const toggleBtn = document.getElementById("menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+toggleBtn.addEventListener("click", () => {
+    if (navLinks.style.display === "flex") {
+        navLinks.style.display = "none";
+    } else {
+        navLinks.style.display = "flex";
+    }
+});
+
+// MOBILE DROPDOWN CLICK
+const dropdownBtn = document.querySelector(".dropdown-btn");
+const dropdownMenu = document.querySelector(".dropdown-content");
+
+dropdownBtn.addEventListener("click", (e) => {
+    e.preventDefault(); 
+    dropdownMenu.style.display =
+        dropdownMenu.style.display === "block" ? "none" : "block";
+});
+
+
+
+
+    </script>
+
+
+    
+
 </body>
 </html>

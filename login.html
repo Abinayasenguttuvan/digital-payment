@@ -2,157 +2,192 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Digital Marketing Agency</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Login</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   
 </head>
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    background: rgb(22, 22, 42);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(255,255,255,0.8);
+    padding: 8px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  }
+  
+  .login-container {
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  .login-box {
+    background: rgba(255,255,255,0.15);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    color: white;
+  }
+  
+  .login-box h2 {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  
+  .subtitle {
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: 0.9;
+  }
+  
+  label {
+    font-weight: 500;
+    display: block;
+    margin-top: 15px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+  }
+  
+  .password-wrapper {
+    position: relative;
+  }
+  
+  .toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .forget-link {
+    display: block;
+    margin-top: 10px;
+    text-align: right;
+    color: #fff;
+    font-size: 0.9rem;
+  }
+  
+  .login-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background: #0d6efd;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .login-btn:hover {
+    background: #084298;
+  }
+  
+  .signup-text {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9rem;
+  }
+  
+  .signup-link {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+  
+</style>
+
 <body>
-      <header>
-        <div class="container">
-          <a href="index.html" class="logo">
-            <img src="./image.png" alt="Stackly Logo" style="width: 100px;">
-            
-          </a>
-          
-          <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-          
-          <nav id="navbar">
-            <a href="index1.html">Home page2</a>
-            <a href="index.html">home page 1</a>
-            <a href="about1.html">About</a>
-            <a href="services1.html">Services</a>
-            <a href="blog1.html">Blog</a>
-            <a href="contact1.html">Contact</a>
-            <a href="page.html">DASHBOARD</a></li>
-            <a href="login.html"><button class="login-button">Login</button></a>
-        <button class="menu-toggle" aria-label="Toggle navigation">
-          &#9776;
-        </button>
-          </nav>
-        </div>
-      </header>
-    <link rel="stylesheet" href="login.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
 
-    
+  <!-- BACK BUTTON -->
+  <a href="index.html" class="back-btn">⬅ Back</a>
 
-   
-    
-  </head>
-  <body>
-    <!-- NAVBAR PLACEHOLDER: This is where navbar.html content will be loaded -->
-    
-    </header>
+  <div class="login-container">
+    <form id="loginForm" class="login-box">
 
-    <main class="login-page-main">
-      <div class="login-container">
-        <h2 class="login-title">Welcome Back</h2>
-        <p class="login-subtitle">
-          Sign in to manage your payments and dashboard.
-        </p>
+      <h2>Welcome Back</h2>
+      <p class="subtitle">Login to your banking account</p>
 
-        <form class="login-form" action="404.html">
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="you@example.com"
-              required
-            />
-          </div>
+      <!-- Email -->
+      <label>Email</label>
+      <input type="email" id="email" placeholder="Enter your email" />
 
-          <div class="form-group">
-            <label for="password">Password</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="••••••••"
-              required
-            />
-            <a href="404E.html" class="forgot-password">Forgot Password?</a>
-          </div>
-
-          <button type="submit" class="login-submit-button">
-            Log In Securely
-          </button>
-        </form>
-  
-
-        <div class="login-footer">
-          <p>Don't have an account? <a href="signup.html">Sign Up Here</a></p>
-        </div>
-      </div>
-    </main>
-
-    <!-- Scripts for Navbar Import (Requires script.js and navbar.html to be present) -->
-    <!-- <script src="script.js"></script> -->
-    <script>
-      // Note: Assumes loadHTML function exists in script.js
-      loadHTML("navbar-placeholder", "navbar.html");
-    </script>
-
-<footer class="footer">
-    <div class="footer-container">
-  
-      <!-- Column 1: Logo and About -->
-      <div class="footer-section about">
-        <img src="./image.png" alt="Stackly Logo" class="footer-logo">
-        <h3>Stackly Digital Payment Services</h3>
-        <p>Empowering businesses and users with fast, secure, and seamless digital transactions.</p>
+      <!-- Password -->
+      <label>Password</label>
+      <div class="password-wrapper">
+        <input type="password" id="password" placeholder="Enter your password" />
+        <span class="toggle-password" onclick="togglePassword()">👁️</span>
       </div>
 
-      
-  
-      <!-- Column 2: Quick Links -->
-      <div class="footer-section links">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index1.html">Home</a></li>
-          <li><a href="about1.html">About</a></li>
-          <li><a href="services1.html">Services</a></li>
-          <li><a href="blog1.html">Blog</a></li>
-          <li><a href="contact1.html">Contact</a></li>
-        </ul>
-      </div>
-  
-      <!-- Column 3: Contact -->
-      <div class="footer-section contact">
-        <h4>Get in Touch</h4>
-        <p> MMR complex,salem,Tamil nadu 636008</p>
-        <p>Email: <a href="mailto:support@stackly.com">info@thestackly.com</a></p>
-        <p>Phone: +91 70107 92745</p>
+      <!-- Forget Password -->
+      <a href="404.html" class="forget-link">Forget Password?</a>
 
+      <button type="submit"  a href="404.html" class="login-btn">Login</button>
 
-        <div class="social-icons">
-          <a href="404.html"><i class="fab fa-facebook-f"></i></a>
-          <a href="404.html"><i class="fab fa-twitter"></i></a>
-          <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
-          <a href="404.html"><i class="fab fa-instagram"></i></a>
-        </div>
-    
-        <!-- <div class="social-icons">
-            <a href="https://www.facebook.com/people/Stackly-Stackly/pfbid0JtGU9e9Lr3qi7T7zwqd7znjcKBFgJkRNUT9dkSAfVgj5Fea9cnwPDAaKFdqcZVvBl/?rdid=6mn5QnllxYJS3OSw&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BrqaZkJRe%2F"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://x.com/The_Stackly"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/company/the-stackly/"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://www.instagram.com/thestackly/#"><i class="fab fa-instagram"></i></a>
-          </div> -->
-              <iframe
-                  src="https://www.google.com/maps?q=Salem%20Tamil%20Nadu&output=embed"
-                  width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
-                </iframe>
-            </div>
-            <div class="copyright">
-              <p>© 2025 Stackly | All Rights Reserved</p>
-            </div>
-        
-          </footer>
+      <!-- SIGN UP SECTION -->
+      <p class="signup-text">
+        Don't have an account?
+        <a href="./signup.html" class="signup-link">Sign Up</a>
+      </p>
+
+    </form>
+  </div>
+
+ 
+  <script>
+    function togglePassword() {
+    const pwd = document.getElementById("password");
+    pwd.type = pwd.type === "password" ? "text" : "password";
+  }
   
-  </body>
+  document.getElementById("loginForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+  
+    const email = document.getElementById("email").value.trim();
+    const pass = document.getElementById("password").value.trim();
+  
+    if (email === "" || pass === "") {
+      alert("Please fill details");
+      return;
+    }
+  
+    // If filled → go to 404 page
+    window.location.href = "404.html";
+  });
+  
+  </script>
+
+</body>
 </html>

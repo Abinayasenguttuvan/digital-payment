@@ -1,74 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stackly Pay - Product Overview</title>
-    <!-- Link to the cumulative site style sheet -->
-    <link rel="stylesheet" href="product1.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Payment</title>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="./products.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-      body {
-        background-image: url('./image1.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
+</head>
+<body>
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+        <a href="index.html">   
+            <img src="./white.webp" alt="Stackly Logo" style="height: 60px; ">
+          </a> 
+        <!-- div class="logo">Tech<span>Solutions</span></div> -->
+
+        <!-- Navigation -->
+        <nav class="navbar">
+            <ul class="nav-links" >
+
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropdown-btn">Home <i class="fa-solid fa-caret-down"></i></a>
+                
+                    <ul class="dropdown-content">
+                        <li><a href="./index.html">Home 1</a></li>
+                        <li><a href="./home2.html">Home 2</a></li>
+                    </ul>
+                </li>
+                
+
+                <li><a href="./products.html">Products</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./dashboard.html">Dashboard</a></li>
+                <li><a href="./login.html">Login</a></li>
+                
+                
 
 
-      
-      </style>
-  
-  </head>
-  <body>
-    <header>
-      <nav class="navbar">
-        <a href="index.html">
-          <img src="./image.png" alt="Stackly Logo" style="width: 100px;">
-        </a>
-        <div class="nav-links">
-          <ul class="main-menu">
-            <li class="menu-item has-dropdown">
-              <a href="index.html">Home page1</a>
-              <!-- <ul class="dropdown-content">
-                <li><a href="index1.html">HOME2</a></li>
-              </ul> -->
-              <li class="menu-item"><a href="index1.html">Home page2</a></li>
-            </li>
-            <li class="menu-item has-dropdown">
-              <a href="products.html">PRODUCTS</a>
-              <ul class="dropdown-content">
-                <li><a href="product1.html">Stackly Pay</a></li>
-                <li><a href="product2.html">Stackly Wallet</a></li>
-                <li><a href="product3.html">Stackly Business API</a></li>
-              </ul>
-            </li>
-            <li class="menu-item has-dropdown">
-              <a href="about.html">ABOUT</a>
-              <ul class="dropdown-content">
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="memb.html">Members</a></li>
-              </ul>
-            </li>
-            <li class="menu-item"><a href="blog.html">BLOG</a></li>
-            <li class="menu-item"><a href="contact.html">CONTACT</a></li>
-            <li class="menu-item"><a href="page1.html">DASHBOARD</a></li>
-          </ul>
+            </ul>
+        </nav>
+
+        <!-- Toggle -->
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
         </div>
-        <a href="login.html"><button class="login-button">Login</button></a>
-        <button class="menu-toggle" aria-label="Toggle navigation">
-          &#9776;
-        </button>
-      </nav>
-    </header>
-    <!-- NAVBAR PLACEHOLDER: This is where navbar.html content will be loaded -->
-    <header id="navbar-placeholder"></header>
 
-    <main class="product-page-main">
+    </header>
+    <style>
+        /* ================= GLOBAL ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f5f7fa;
+}
+
+a { text-decoration: none; }
+
+ul { list-style: none; }
+
+
+
+
+/* ================= HEADER ================= */
+.header {
+    width: 100%;
+    padding: 18px 40px;
+    background: #0b1f3a;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #00d4ff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+/* Dropdown Wrapper */
+.dropdown {
+    position: relative;
+}
+
+/* Dropdown Button */
+.dropdown-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Desktop Hover */
+@media (min-width: 901px) {
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 38px;
+    left: 0;
+    background: #12274d;
+    width: 160px;
+    border-radius: 8px;
+    padding: 10px 0;
+    z-index: 999;
+}
+
+.dropdown-content li a {
+    display: block;
+    padding: 10px 15px;
+    color: white;
+}
+
+.dropdown-content li a:hover {
+    background: #0e1c33;
+}
+
+/* Toggle */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+li a{
+    color:white;
+}
+
+
+
+/* ================= FOOTER ================= */
+.footer {
+    background: #0b1f3a;
+    padding-top: 40px;
+    color: white;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+
+/* Footer Boxes */
+.footer-box h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #00e1ff;
+}
+
+.footer-box p, 
+.footer-box a {
+    color: #e0e0e0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-box ul {
+    list-style: none;
+}
+
+.footer-box ul li {
+    margin-bottom: 8px;
+}
+
+.footer-box ul li a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-box ul li a:hover {
+    color: #00e1ff;
+}
+
+
+.footer-bottom {
+    text-align: center;
+    background: #08192e;
+    padding: 15px 0;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin-right: 12px;
+    font-size: 18px;
+    width: 38px;
+    height: 38px;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 50%;
+    background: #111;
+    color: #00e1ff;
+    border: 1px solid #00e1ff;
+    transition: 0.3s;
+}
+
+.footer-social a:hover {
+    background: #00e1ff;
+    color: #000;
+    transform: translateY(-5px);
+}
+
+/* Map */
+.footer-box iframe {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    border: none;
+}
+
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #0b1f3a;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        width: 200px;
+        padding: 20px;
+        border-radius: 10px;
+        z-index: 1000;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .footer-box {
+        width: 45%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer-box {
+        width: 100%;
+    }
+}
+    </style>
+    <body>
+
+        <main class="product-page-main">
       <!-- Product Introduction Hero (Text and Visual Side-by-Side) -->
       <section class="product-intro-hero">
         <div class="intro-content">
@@ -85,14 +283,14 @@
             platform for processing payments, managing invoices, and reducing
             overhead costs. Get paid instantly, globally.
           </p>
-          <a href="./404E.html" class="cta-button cta-button-primary"
+          <a href="./404.html" class="cta-button cta-button-primary"
             >Get Started Now</a
           >
         </div>
         <div class="intro-visual">
           <!-- Replace path/to/product_dashboard_mockup.png with your actual image -->
           <img
-            src="https://img.freepik.com/free-vector/business-dashboard-user-panel_52683-26695.jpg?semt=ais_hybrid&w=740&q=80"
+            src="./project1.webp"
             alt="Stackly Pay Dashboard Mockup"
             class="product-mockup-img"
           />
@@ -107,7 +305,7 @@
           <div class="feature-card">
             <!-- Replace path/to/icon_security.svg with your actual icon -->
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC51mGLQGrkCGfnebQ96fU-cjN4CBuitenmQ&sg"
+              src="./1.webp"
               alt="Security Icon"
               class="feature-icon"
             />
@@ -121,7 +319,7 @@
           <div class="feature-card">
             <!-- Replace path/to/icon_speed.svg with your actual icon -->
             <img
-              src="https://blog.xoxoday.com/content/images/size/w1384/format/webp/2025/08/using-virtual-prepaid-cards-to-make-global-payments.png"
+              src="./2.webp"
               alt="Speed Icon"
               class="feature-icon"
             />
@@ -135,7 +333,7 @@
           <div class="feature-card">
             <!-- Replace path/to/icon_transparency.svg with your actual icon -->
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpV8JDZVVitqmAp7nb-6YV2QvQbMXH7fGO0zkAN9AJJ_g7zUfHjiJ_c9F1Xm2yj0vfZUU&usqp=CAU"
+              src="./3.webp"
               alt="Transparency Icon"
               class="feature-icon"
             />
@@ -195,67 +393,168 @@
       </section>
     </main>
 
-    <!-- Scripts for Navbar Import (Requires script.js and navbar.html to be present) -->
-    <script src="script.js"></script>
-    <script>
-      loadHTML("navbar-placeholder", "navbar.html");
-    </script>
 
-<footer class="footer">
-  <div class="footer-container">
+     <!-- 🟦 About Stackly Wallet (Top Section) -->
+  <!-- <section id="about">
+    <h2>About Stackly Wallet</h2>
+    <p>
+      <strong>Stackly Wallet</strong> is your trusted digital payment partner designed 
+      for seamless, secure, and instant money transfers. From paying bills and shopping 
+      online to recharging and earning rewards, Stackly Wallet keeps all your payments simple and smart.
+    </p>
+    <p>
+      Our mission is to make every digital transaction faster, safer, and easier for everyone — 
+      helping you go truly cashless with confidence.
+    </p>
+  </section> -->
 
-    <!-- Column 1: Logo and About -->
-    <div class="footer-section about">
-      <img src="./image.png" alt="Stackly Logo" class="footer-logo">
-      <h3>Stackly Digital Payment Services</h3>
-      <p>Empowering businesses and users with fast, secure, and seamless digital transactions.</p>
-    </div>
+  <!-- 🟩 Stackly Wallet Section with Features -->
+  <!-- <section class="wallet-card"> -->
+    <!-- <div class="left">
+      <h1>Welcome to Stackly Wallet</h1>
+      <p>Manage your money easily — pay bills, shop online, and send money in seconds. 
+         Enjoy secure, fast, and reliable digital payments anywhere, anytime.</p> --> 
 
-    
-
-    <!-- Column 2: Quick Links -->
-    <div class="footer-section links">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="product1.html">product </a></li>
-        <li><a href="about.html">about</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-
-    <!-- Column 3: Contact -->
-    <div class="footer-section contact">
-      <h4>Get in Touch</h4>
-      <p> MMR complex,salem,Tamil nadu 636008</p>
-      <p>Email: <a href="mailto:support@stackly.com">info@thestackly.com</a></p>
-      <p>Phone: +91 70107 92745</p>
-
-
-      <div class="social-icons">
-        <a href="404.html"><i class="fab fa-facebook-f"></i></a>
-        <a href="404.html"><i class="fab fa-twitter"></i></a>
-        <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
-        <a href="404.html"><i class="fab fa-instagram"></i></a>
+      <!-- ✨ Features Grid -->
+       <!-- <div class="features" aria-hidden="false">
+        <div class="feature"><span class="ico">⚡</span> Instant transfers</div>
+        <div class="feature"><span class="ico">🔒</span> Bank-grade security</div>
+        <div class="feature"><span class="ico">🛍️</span> Shop online easily</div>
+        <div class="feature"><span class="ico">💸</span> Cashback & rewards</div>
       </div>
-  
-      <!-- <div class="social-icons">
-          <a href="https://www.facebook.com/people/Stackly-Stackly/pfbid0JtGU9e9Lr3qi7T7zwqd7znjcKBFgJkRNUT9dkSAfVgj5Fea9cnwPDAaKFdqcZVvBl/?rdid=6mn5QnllxYJS3OSw&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BrqaZkJRe%2F"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://x.com/The_Stackly"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.linkedin.com/company/the-stackly/"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://www.instagram.com/thestackly/#"><i class="fab fa-instagram"></i></a>
-        </div> -->
-            <iframe
-                src="https://www.google.com/maps?q=Salem%20Tamil%20Nadu&output=embed"
-                width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
-              </iframe>
-          </div>
-          <div class="copyright">
-            <p>© 2025 Stackly | All Rights Reserved</p>
-          </div>
-      
-        </footer>
 
-  </body>
+      <button class="btn btn-primary" id="getStartedBtn">Get Started</button> --> 
+      <!-- <button class="btn btn-outline" id="learnMoreBtn">Learn More</button> -->
+    <!-- </div>
+
+    <div class="right">
+      <h3>Your Balance</h3>
+      <h2>₹2,540.00</h2>
+      <p>Last transaction: Paid electricity bill ₹600</p>
+    </div>
+  </section>
+
+  <section class="container">
+    <h2>Empower Your Business with Stackly API</h2>
+    <p>
+      The <strong>Stackly Business API</strong> lets companies integrate secure, fast, and flexible digital payment solutions
+      directly into their platforms. Automate transactions, handle payouts, and manage payments seamlessly.
+    </p> -->
+
+    <!-- <div class="features">
+      <div class="feature">
+        <span>⚙️</span>
+        <h4>Easy Integration</h4>
+        <p>Connect Stackly to your platform using simple REST APIs and start within minutes.</p>
+      </div>
+      <div class="feature">
+        <span>💳</span>
+        <h4>Instant Payments</h4>
+        <p>Enable quick, real-time transfers for your customers and partners.</p>
+      </div>
+      <div class="feature">
+        <span>🔒</span>
+        <h4>Bank-Grade Security</h4>
+        <p>Protect every transaction with advanced encryption and fraud detection systems.</p>
+      </div>
+      <div class="feature">
+        <span>📊</span>
+        <h4>Analytics Dashboard</h4>
+        <p>Monitor payments, track insights, and optimize performance with live reports.</p>
+      </div>
+    </div> -->
+
+    <!-- <button class="btn" id="getApiBtn"><a href="signup.html"></a>Get Started with API</button> -->
+  <!-- </section> -->
+
+
+    </body>
+<!-- <footer> -->
+    <footer class="footer">
+        <div class="footer-container">
+    
+            <!-- Logo / About -->
+            <div class="footer-box">
+                <img src="./white.webp" alt="Stackly Logo" class="footer-logo"  style="height:60px;">
+   
+               
+                <!-- <p>We deliver secure, scalable and innovative IT services for global businesses.</p><br> -->
+    
+                <!-- Social Icons -->
+                <div class="footer-social">
+                    <a href="./404.html"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="./404.html"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="./404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="./404.html"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+    
+            <!-- Quick Links -->
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <ul>
+                  <li><a href="./index.html">Home </a></li>
+                  <li><a href="./products.html">products</a></li>
+                  <li><a href="./about.html">About</a></li>
+                  <li><a href="./blog.html">Blog</a></li>
+                  <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+    
+            <!-- Address -->
+            <div class="footer-box">
+                <h3>Our Address</h3>
+                <p>
+                    MMR complex.<br>
+                    chinna tirupathi kovil street,<br>
+                    salem,Tamil nadu-636008<br>
+                    <!-- Bengaluru, Karnataka – 560066<br> -->
+                    India<br><br>
+    
+                    <strong>Phone:</strong> +91 98765 43210<br>
+                    <strong>Email:</strong> support@thestackly.com
+                </p>
+            </div>
+    
+            <!-- Google Map -->
+            <div class="footer-box">
+                <h3>Location</h3>
+                <iframe 
+                src="https://www.google.com/maps?q=Salem%20Tamil%20Nadu&output=embed"
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+    
+        </div>
+    
+        <div class="footer-bottom">
+            <p>© 2025 stackly | All Rights Reserved</p>
+        </div>
+    </footer>
+    <script>
+        // TOGGLE MENU
+const toggleBtn = document.getElementById("menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+toggleBtn.addEventListener("click", () => {
+    if (navLinks.style.display === "flex") {
+        navLinks.style.display = "none";
+    } else {
+        navLinks.style.display = "flex";
+    }
+});
+
+// MOBILE DROPDOWN CLICK
+const dropdownBtn = document.querySelector(".dropdown-btn");
+const dropdownMenu = document.querySelector(".dropdown-content");
+
+dropdownBtn.addEventListener("click", (e) => {
+    e.preventDefault(); 
+    dropdownMenu.style.display =
+        dropdownMenu.style.display === "block" ? "none" : "block";
+});
+    </script>
+</body>
 </html>
+
